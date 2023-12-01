@@ -9,11 +9,13 @@ export default function Lists(){
             <Head>
                 <title>My Lists</title>
             </Head>
-            <Link className="mt-4 ml-4 flex items-center" href="/">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
-                    <path d="M13 2L2 12L13 22" stroke="#6284FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <p className="ml-2 text-task-blue text-[20px] font-dm">Planner</p>
+            <Link legacyBehavior href="/">
+                <a className="mt-4 ml-4 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
+                        <path d="M13 2L2 12L13 22" stroke="#6284FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <a className="ml-2 text-task-blue text-[20px] font-dm">Planner</a>
+                </a>
             </Link>
 
             <div className="mt-2 ml-4 font-dm text-[30px] font-bold flex items-center">

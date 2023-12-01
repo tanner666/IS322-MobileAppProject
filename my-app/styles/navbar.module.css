@@ -1,0 +1,45 @@
+/* styles/Navbar.module.css */
+
+.navbar {
+    background-color: #ffffff; /* Adjust the color to match the design */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* For the slight shadow */
+    position: fixed; /* Fixed position */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .navList {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Or use space-between with padding on the sides */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navItem {
+    /* Styles for the list items if necessary */
+  }
+
+  .navLink {
+    display: flex;
+    align-items: center;
+     /* Adjust padding as needed */
+    padding-bottom: 10px;
+    border-radius: 20px; /* Rounded corners for the links */
+    transition: background-color 0.3s; /* For a smooth background color transition */
+  }
+  
+  .navLink:hover,
+  .navLink:focus {
+    
+  }
+
+  .customImgSize {
+    width: 30px;  
+    height: 30px; 
+  }
+  
+  /* You'll also want to add styles for your icons */
+  

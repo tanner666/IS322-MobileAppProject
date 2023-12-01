@@ -34,9 +34,9 @@ export default function Lists(){
             </div>
 
             <div className="mt-4 ml-4">
-                <ListGroup groupTitle="Grocery List" />
-                <ListGroup groupTitle="To-Do"/>
-                <ListGroup groupTitle="Chores" />
+                <ListGroup groupId="1" defaultGroupTitle="Grocery List" />
+                <ListGroup groupId="2" defaultGroupTitle="To-Do"/>
+                <ListGroup groupId="3" defaultGroupTitle="Chores" />
             </div>
             <Navbar/>
         </>

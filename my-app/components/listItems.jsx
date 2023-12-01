@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import React, {useState, useEffect} from 'react';
 
-const ListItems = () =>{
+const ListItems = ({groupId}) =>{
     const [inputValue, setInputValue] = useState('');
 
     // Load saved text from localStorage when the component mounts
     //this is only temporary for project-demo until databse is hooked-up
     useEffect(() => {
-        const savedText = localStorage.getItem('listItemsText');
+        const savedText = localStorage.getItem(`listItemsText-${groupId}`);
         if (savedText) {
             setInputValue(savedText);
         }
@@ -16,12 +16,12 @@ const ListItems = () =>{
     const handleClick = (event) =>{
         //check if this is first time typing and add bullet point if it is
         let value = event.target.value;
-        let item = localStorage.getItem('listItemsText');
+        let item = localStorage.getItem(`listItemsText-${groupId}`);
         console.log(":",item,":");
         if (item === null || item === ' ' || item === ''){
             console.log("success");
             setInputValue('• '); // Start with a bullet point
-            localStorage.setItem('listItemsText', value);
+            localStorage.setItem(`listItemsText-${groupId}`, value);
             adjustHeight(event.target);
         }
     }
@@ -39,7 +39,7 @@ const ListItems = () =>{
             adjustHeight(event.target);
         });
 
-        localStorage.setItem('listItemsText', value);
+        localStorage.setItem(`listItemsText-${groupId}`, value);
     };
 
     const adjustHeight = (textarea) => {

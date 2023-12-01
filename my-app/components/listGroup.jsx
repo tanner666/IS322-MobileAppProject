@@ -97,7 +97,7 @@ const ListGroup = ({groupId, defaultGroupTitle}) => {
       </div>
       {/* Use ref to determine if the click is inside ListItems */}
       <div ref={listRef}>
-        {isListVisible && <ListItems />}
+        {isListVisible && <ListItems groupId={groupId}/>}
       </div>
     </div>
   </>
